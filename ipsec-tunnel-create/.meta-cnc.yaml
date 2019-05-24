@@ -67,6 +67,14 @@ variables:
     description: The Destination Network/CIDR routed into the tunnel interface
     default: 10.0.0.0/8
     type_hint: text
+  - name: virtual_router_name
+    description: Name of the virtual router (must already exist)
+    default: default
+    type_hint: text
+  - name:
+    description: The Destination Network/CIDR routed into the tunnel interface
+    default: 10.0.0.0/8
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 
@@ -85,7 +93,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/import/network/interface
     file: import.xml
   - name: virtual-router
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: virtual-router.xml
   - name: ike-gateway
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/gateway
