@@ -4,7 +4,7 @@
 <routing-table>
     <ip>
         <static-route>
-           <entry name="{{ tunnel_route_name }}"}}>
+           <entry name="{{ tunnel_route_name }}">
                     <path-monitor>
                       <enable>no</enable>
                       <failure-condition>any</failure-condition>
