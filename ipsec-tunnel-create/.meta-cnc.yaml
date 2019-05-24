@@ -43,6 +43,14 @@ variables:
     description: Name for the IKE Gateway
     default: ike-gateway
     type_hint: text
+  - name: local_interface_address
+    description: IP address/Subnet of the Local Negotiating Interface
+    default: 1.1.1.1/24
+    type_hint: text
+  - name: local_interface
+    description: Local Negotiating Interface Name
+    default: ethernet1/1
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 

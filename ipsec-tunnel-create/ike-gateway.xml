@@ -1,7 +1,7 @@
 <entry name="{{ ike_gateway_name }}">
               <authentication>
                 <pre-shared-key>
-                  <key>{{ preshared_key | md5_hash }}</key>
+                  <key>{{ preshared_key }}</key>
                 </pre-shared-key>
               </authentication>
               <protocol>
@@ -17,8 +17,8 @@
                 </ikev2>
               </protocol>
               <local-address>
-                <ip>192.168.55.21/24</ip>
-                <interface>ethernet1/1</interface>
+                <ip>{{ local_interface_address }}</ip>
+                <interface>{{ local_interface }}</interface>
               </local-address>
               <protocol-common>
                 <nat-traversal>
