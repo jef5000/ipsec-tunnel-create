@@ -35,6 +35,10 @@ variables:
     description: Tunnel Interface tunnel.Number
     default: tunnel.1
     type_hint: text
+  - name: tunnel_interface_zone
+    description: Zone applied to the Tunnel Interface (must already exist on the firewall)
+    default: untrust
+    type_hint: text
   - name: preshared_key
     description: Preshared Key
     default: myPresharedKey
@@ -75,7 +79,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel/units
     file: tunnel-interface.xml
   - name: tunnel-zone
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone/entry[@name='untrust']/network/layer3
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
     file: tunnel-zone.xml
   - name: import.xml
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/import/network/interface
