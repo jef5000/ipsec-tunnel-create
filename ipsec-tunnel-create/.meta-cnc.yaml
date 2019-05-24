@@ -47,6 +47,17 @@ variables:
     description: Name for the IKE Gateway
     default: ike-gateway
     type_hint: text
+  - name: ike_version
+    description: IKE Version
+    default: ike_v1_only
+    type_hint: dropdown
+    dd_list:
+      - key: ike_v1_only
+        value:
+      - key: ike_v2_only
+        value: ikev2
+      - key: ike_v2_preferred
+        value: ikev2-preferred
   - name: local_interface_address
     description: IKE IP address/CIDR of the Local Interface
     default: 1.1.1.1/24

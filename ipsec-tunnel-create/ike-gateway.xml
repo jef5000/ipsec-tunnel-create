@@ -16,7 +16,7 @@
                   </dpd>
                 </ikev2>
               </protocol>
-              {{ ike_version }}
+              <version>{{ ike_version }}</version>
               <local-address>
                 <ip>{{ local_interface_address }}</ip>
                 <interface>{{ local_interface }}</interface>
