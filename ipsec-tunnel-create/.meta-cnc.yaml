@@ -90,7 +90,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys
     file: tunnel-zone.xml
   - name: import.xml
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys
     file: import.xml
   - name: virtual-router
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
