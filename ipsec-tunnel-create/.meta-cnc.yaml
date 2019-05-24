@@ -53,7 +53,7 @@ variables:
     type_hint: dropdown
     dd_list:
       - key: ike_v1_only
-        value: ''
+        value: null
       - key: ike_v2_only
         value: ikev2
       - key: ike_v2_preferred
