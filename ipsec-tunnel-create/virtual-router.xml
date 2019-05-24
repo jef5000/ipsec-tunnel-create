@@ -1,5 +1,5 @@
 <interface>
-    <member>tunnel.101</member>
+    <member>{{ tunnel_interface }}</member>
 </interface>
 <routing-table>
     <ip>
@@ -13,7 +13,7 @@
                     <bfd>
                       <profile>None</profile>
                     </bfd>
-                    <interface>tunnel.101</interface>
+                    <interface>{{ tunnel_interface }}</interface>
                     <metric>10</metric>
                     <destination>192.168.45.0/24</destination>
                     <route-table>

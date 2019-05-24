@@ -1,1 +1,1 @@
-<entry name="tunnel.101"/>
+<entry name="{{ tunnel_interface }}"/>

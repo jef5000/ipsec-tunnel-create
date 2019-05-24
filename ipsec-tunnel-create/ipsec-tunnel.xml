@@ -9,7 +9,7 @@
               <tunnel-monitor>
                 <enable>no</enable>
               </tunnel-monitor>
-              <tunnel-interface>tunnel.101</tunnel-interface>
+              <tunnel-interface>{{ tunnel_interface }}</tunnel-interface>
             </entry>
           </ipsec>
         </tunnel>
