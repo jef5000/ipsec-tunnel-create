@@ -39,20 +39,23 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: certificate
-    xpath: /config/shared/certificate
-    file: certificate.xml
-  - name: forward-trust
-    xpath: /config/shared/ssl-decrypt/forward-trust-certificate
-    file: forward_trust.xml
-  - name: eicar-url
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
-    file: eicar_url.xml
-  - name: decrypt-profile
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
-    file: decrypt_profile.xml
-  - name: decrypt_rule
-    xpath:  /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/decryption/rules
-    file: decrypt_rule.xml
+  - name: tunnel-interface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel/units
+    file: tunnel-interface.xml
+  - name: tunnel-zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone/entry[@name='untrust']/network/layer3
+    file: tunnel-zone.xml
+  - name: import.xml
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/import/network/interface
+    file: import.xml
+  - name: virtual-router
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']
+    file: virtual-router.xml
+  - name: ike-gateway
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/ike/gateway
+    file: ike-gateway.xml
+  - name: ipsec-tunnel
+    xpath:  /config/devices/entry[@name='localhost.localdomain']/network
+    file: ipsec-tunnel.xml
 # ---------------------------------------------------------------------
 # end of snippets section

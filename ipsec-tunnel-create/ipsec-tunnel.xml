@@ -1,0 +1,15 @@
+<tunnel>
+          <ipsec>
+            <entry name="ipsec-tunnel">
+              <auto-key>
+                <ike-gateway>
+                  <entry name="ike-gateway2"/>
+                </ike-gateway>
+              </auto-key>
+              <tunnel-monitor>
+                <enable>no</enable>
+              </tunnel-monitor>
+              <tunnel-interface>tunnel.101</tunnel-interface>
+            </entry>
+          </ipsec>
+        </tunnel>
