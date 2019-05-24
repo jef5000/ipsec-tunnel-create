@@ -71,9 +71,9 @@ variables:
     description: Name of the virtual router (must already exist)
     default: default
     type_hint: text
-  - name:
-    description: The Destination Network/CIDR routed into the tunnel interface
-    default: 10.0.0.0/8
+  - name: vsys
+    description: Vsys Name
+    default: vsys1
     type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
@@ -87,10 +87,10 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/tunnel/units
     file: tunnel-interface.xml
   - name: tunnel-zone
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys
     file: tunnel-zone.xml
   - name: import.xml
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/import/network/interface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/
     file: import.xml
   - name: virtual-router
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router

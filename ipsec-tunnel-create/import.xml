@@ -1,1 +1,9 @@
-<member>{{ tunnel_interface }}</member>
+<entry name="{{ vsys }}">
+    <import>
+        <network>
+            <interface>
+                <member>{{ tunnel_interface }}</member>
+            </interface>
+        </network>
+    </import>
+</entry>

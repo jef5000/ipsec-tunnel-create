@@ -1,11 +1,11 @@
 
-    <entry name="{{ virtual_router_name }}">
-        <interface>
-            <member>{{ tunnel_interface }}</member>
-        </interface>
-        <routing-table>
-            <ip>
-             <static-route>
+<entry name="{{ virtual_router_name }}">
+    <interface>
+        <member>{{ tunnel_interface }}</member>
+    </interface>
+    <routing-table>
+        <ip>
+            <static-route>
                 <entry name="{{ tunnel_route_name }}">
                     <path-monitor>
                       <enable>no</enable>
@@ -23,6 +23,6 @@
                     </route-table>
                 </entry>
             </static-route>
-            </ip>
-        </routing-table>
-    </entry>
+        </ip>
+    </routing-table>
+</entry>

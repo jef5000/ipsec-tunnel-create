@@ -1,7 +1,12 @@
-<entry name="{{ tunnel_interface_zone }}">
-    <network>
-        <layer3>
-            <member>{{ tunnel_interface }}</member>
-        </layer3>
-    </network>
+<entry name="{{ vsys }}">
+    <zone>
+        <entry name="{{ tunnel_interface_zone }}">
+            <network>
+                <layer3>
+                    <member>{{ tunnel_interface }}</member>
+                </layer3>
+            </network>
+        </entry>
+    </zone>
 </entry>
+
