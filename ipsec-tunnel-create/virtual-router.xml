@@ -4,7 +4,7 @@
 <routing-table>
     <ip>
         <static-route>
-           <entry name="tunnel-route2">
+           <entry name="{{ tunnel_route_name }}"}}>
                     <path-monitor>
                       <enable>no</enable>
                       <failure-condition>any</failure-condition>
@@ -15,7 +15,7 @@
                     </bfd>
                     <interface>{{ tunnel_interface }}</interface>
                     <metric>10</metric>
-                    <destination>192.168.45.0/24</destination>
+                    <destination>{{ remote_network_tunnel_route }}</destination>
                     <route-table>
                       <unicast/>
                     </route-table>

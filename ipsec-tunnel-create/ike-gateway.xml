@@ -29,6 +29,6 @@
                 </fragmentation>
               </protocol-common>
               <peer-address>
-                <ip>192.168.55.20</ip>
+                <ip>{{ peer_address }}</ip>
               </peer-address>
             </entry>

@@ -44,12 +44,24 @@ variables:
     default: ike-gateway
     type_hint: text
   - name: local_interface_address
-    description: IP address/Subnet of the Local Negotiating Interface
+    description: IKE IP address/Subnet of the Local Interface
     default: 1.1.1.1/24
     type_hint: text
   - name: local_interface
-    description: Local Negotiating Interface Name
+    description: IKE Local Negotiating Interface Name
     default: ethernet1/1
+    type_hint: text
+  - name: peer_address
+    description: IKE Peer Address
+    default: 2.2.2.2
+    type_hint: text
+  - name: tunnel_route_name
+    description: Name for the Static Tunnel Route Entry
+    default: Tunnel_Route
+    type_hint: text
+  - name: remote_network_tunnel_route
+    description: The Destination Network routed into the tunnel interface
+    default: 10.0.0.0/8
     type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
