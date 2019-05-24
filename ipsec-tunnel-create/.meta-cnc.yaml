@@ -1,0 +1,58 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: ipsec-tunnel-create
+# label used for menu selection
+label: ipsec-tunnel-create
+description: This skillet will take input variables and configure an IPSec Tunnnel and IKE Gateway
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: panos
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - myCollection
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+# variables section
+# ---------------------------------------------------------------------
+# variables used in the configuration templates
+# type_hint defines the form field used by panhandler
+# type_hints can be text, ip_address, or dropdown
+variables:
+  - name: hostname
+    description: Firewall hostname
+    default: myFirewall
+    type_hint: text
+# ---------------------------------------------------------------------
+# end of variables section
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: certificate
+    xpath: /config/shared/certificate
+    file: certificate.xml
+  - name: forward-trust
+    xpath: /config/shared/ssl-decrypt/forward-trust-certificate
+    file: forward_trust.xml
+  - name: eicar-url
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
+    file: eicar_url.xml
+  - name: decrypt-profile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
+    file: decrypt_profile.xml
+  - name: decrypt_rule
+    xpath:  /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/decryption/rules
+    file: decrypt_rule.xml
+# ---------------------------------------------------------------------
+# end of snippets section
