@@ -3,7 +3,7 @@
             <entry name="ipsec-tunnel">
               <auto-key>
                 <ike-gateway>
-                  <entry name="{{ ike_gateway_name }}"</entry>
+                  <entry name="{{ ike_gateway_name }}"/>
                 </ike-gateway>
               </auto-key>
               <tunnel-monitor>
