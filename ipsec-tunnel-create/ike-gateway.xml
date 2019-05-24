@@ -1,7 +1,7 @@
-<entry name="ike-gateway2">
+<entry name="{{ ike_gateway_name }}">
               <authentication>
                 <pre-shared-key>
-                  <key>-AQ==c/+RzmCgn3UV5QU9c+W5TIt8uYI=pbtBFsQ6vVHMglcFA6IYQQ==</key>
+                  <key>{{ preshared_key | md5_hash }}</key>
                 </pre-shared-key>
               </authentication>
               <protocol>
