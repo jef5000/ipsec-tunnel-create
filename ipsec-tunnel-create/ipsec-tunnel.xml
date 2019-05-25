@@ -1,15 +1,15 @@
 <tunnel>
-          <ipsec>
-            <entry name="ipsec-tunnel">
-              <auto-key>
+    <ipsec>
+        <entry name="ipsec-tunnel">
+            <auto-key>
                 <ike-gateway>
                   <entry name="{{ ike_gateway_name }}"/>
                 </ike-gateway>
-              </auto-key>
-              <tunnel-monitor>
+            </auto-key>
+            <tunnel-monitor>
                 <enable>no</enable>
               </tunnel-monitor>
-              <tunnel-interface>{{ tunnel_interface }}</tunnel-interface>
-            </entry>
-          </ipsec>
-        </tunnel>
+            <tunnel-interface>{{ tunnel_interface }}</tunnel-interface>
+        </entry>
+    </ipsec>
+</tunnel>

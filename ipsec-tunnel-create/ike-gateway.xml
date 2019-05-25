@@ -1,35 +1,35 @@
 <entry name="{{ ike_gateway_name }}">
-              <authentication>
-                <pre-shared-key>
-                  <key>{{ preshared_key }}</key>
-                </pre-shared-key>
-              </authentication>
-              <protocol>
-                <ikev1>
-                  <dpd>
-                    <enable>yes</enable>
-                  </dpd>
-                </ikev1>
-                <ikev2>
-                  <dpd>
-                    <enable>yes</enable>
-                  </dpd>
-                </ikev2>
-                <version>{{ ike_version }}</version>
-              </protocol>
-              <local-address>
-                <ip>{{ local_interface_address }}</ip>
-                <interface>{{ local_interface }}</interface>
-              </local-address>
-              <protocol-common>
-                <nat-traversal>
-                  <enable>no</enable>
-                </nat-traversal>
-                <fragmentation>
-                  <enable>no</enable>
-                </fragmentation>
-              </protocol-common>
-              <peer-address>
-                <ip>{{ peer_address }}</ip>
-              </peer-address>
-            </entry>
+    <authentication>
+        <pre-shared-key>
+            <key>{{ preshared_key }}</key>
+        </pre-shared-key>
+    </authentication>
+    <protocol>
+        <ikev1>
+            <dpd>
+                <enable>yes</enable>
+            </dpd>
+        </ikev1>
+        <ikev2>
+            <dpd>
+                <enable>yes</enable>
+            </dpd>
+        </ikev2>
+        <version>{{ ike_version }}</version>
+    </protocol>
+    <local-address>
+        <ip>{{ local_interface_address }}</ip>
+        <interface>{{ local_interface }}</interface>
+    </local-address>
+    <protocol-common>
+        <nat-traversal>
+            <enable>no</enable>
+        </nat-traversal>
+        <fragmentation>
+            <enable>no</enable>
+        </fragmentation>
+    </protocol-common>
+    <peer-address>
+        <ip>{{ peer_address }}</ip>
+    </peer-address>
+</entry>
